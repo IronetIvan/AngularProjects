@@ -78,7 +78,33 @@ function funcionRetorno(numeroUno:number, numeroDos:number):number {
 function funcionCualquierParametro(params:any) {
     console.log(params);
 }
+
+function funcionParamtrosMultiples(nombres:string,...nombresMultiple:string[]) {
+    console.log(nombre);
+if(nombresMultiple.length){
+    nombresMultiple.forEach(element => {
+        console.log(element);
+    });
+}else{
+    console.log("No han pasado parametros")
+}
+}
+
+function funcionParametrosOptativos(panombre:string, apellido:string, edad?:number) {
+    if(edad== null){
+        console.log(`${nombre} ${apellido}`)
+    }else{
+        console.log(`${nombre} ${apellido} ${edad}`)
+    }
+}
+
+function funcionValoresDefecto(nombre:string, apellido:string = "Redondo") {
+    console.log(`${nombre} ${apellido}`)
+}
 funcionInicial(`MiNombre`);
 funcionInicialParametros(`Ivan`, `Redondo`, 21);
 console.log(funcionRetorno(55,57))
 funcionCualquierParametro(2020);//Cualquier tipo de parametro ACCEPT
+funcionParamtrosMultiples(`Ivan`,`hola`, `adios`)
+funcionParametrosOptativos(`Ivan`, `Reedondo`, 21)// parametro edad es optativo edad?:number
+funcionValoresDefecto(`Ivan`)// por defecto el apellido se pone, no hace falta pasarlo

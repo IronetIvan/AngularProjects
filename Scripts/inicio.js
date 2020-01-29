@@ -62,7 +62,37 @@ function funcionRetorno(numeroUno, numeroDos) {
 function funcionCualquierParametro(params) {
     console.log(params);
 }
+function funcionParamtrosMultiples(nombres) {
+    var nombresMultiple = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        nombresMultiple[_i - 1] = arguments[_i];
+    }
+    console.log(nombre);
+    if (nombresMultiple.length) {
+        nombresMultiple.forEach(function (element) {
+            console.log(element);
+        });
+    }
+    else {
+        console.log("No han pasado parametros");
+    }
+}
+function funcionParametrosOptativos(panombre, apellido, edad) {
+    if (edad == null) {
+        console.log(nombre + " " + apellido);
+    }
+    else {
+        console.log(nombre + " " + apellido + " " + edad);
+    }
+}
+function funcionValoresDefecto(nombre, apellido) {
+    if (apellido === void 0) { apellido = "Redondo"; }
+    console.log(nombre + " " + apellido);
+}
 funcionInicial("MiNombre");
 funcionInicialParametros("Ivan", "Redondo", 21);
 console.log(funcionRetorno(55, 57));
 funcionCualquierParametro(2020); //Cualquier tipo de parametro ACCEPT
+funcionParamtrosMultiples("Ivan", "hola", "adios");
+funcionParametrosOptativos("Ivan", "Reedondo", 21); // parametro edad es optativo edad?:number
+funcionValoresDefecto("Ivan"); // por defecto el apellido se pone, no hace falta pasarlo
