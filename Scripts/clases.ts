@@ -23,3 +23,20 @@ class Alumno{
 let miAlumno:Alumno = new Alumno(`Ivan`, `Redondo`, 21);
 miAlumno.getNombre
 console.log(miAlumno.getNombre);
+
+
+interface trabajador{
+    id:number;
+    nombre:string;
+    apellido:string;
+}
+
+let miTrabajador:trabajador = {id:1, nombre:"Ivan",apellido:"Redondo"};
+console.log(miTrabajador.apellido)
+console.log(miTrabajador.nombre)
+console.log(miTrabajador.id)
+
+let trabajadores : trabajador[] = [{id:1, nombre:"Ivan",apellido:"Redondo"},
+{id:2, nombre:"Adrian",apellido:"Olmo"},
+{id:3, nombre:"Raul",apellido:"Redondo"}];
+console.log(trabajadores[0].apellido)
