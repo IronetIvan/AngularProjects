@@ -1,3 +1,51 @@
-<div class="container">
-  <h1>App realizada por: {{nombre}}</h1>
+<div>
+  <h1>APP Web realizada por {{ nombre }}</h1>
+
+  <div class="jumbotron">
+    <h1 class="display-4">Ejemplo Angular</h1>
+    <p class="lead">
+      This is a simple hero unit, a simple jumbotron-style component for calling
+      extra attention to featured content or information.
+    </p>
+    <hr class="my-4" />
+    <p>Esto es un ejemplo de aplicacion con Angular 8 +Jumbo</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </div>
+
+  <div class="row">
+    <div class="card" style="width: 18rem;">
+      <img [src]="rutajava" class="img-fluid" alt="Responsive image" />
+      <div class="card-body">
+        <h5 class="card-title">Java</h5>
+        <p class="card-text">
+          Lenguaje de programacion Multiplataforma
+        </p>
+        <a href="#" class="btn btn-primary">Ver detalle</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img [src]="rutapower" class="img-fluid" alt="Responsive image" />
+      <div class="card-body">
+        <h5 class="card-title">Power Shell</h5>
+        <p class="card-text">
+          Lenguaje destinado a la automaztización y administracion de SO
+        </p>
+        <a href="#" class="btn btn-primary">Ver detalle</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img [src]="rutaangular" class="img-fluid" alt="Responsive image" />
+      <div class="card-body">
+        <h5 class="card-title">Angular</h5>
+        <p class="card-text">
+          Lenguaje destinado a la porgramacion web con Bootstrap
+        </p>
+        <a href="#" class="btn btn-primary">Ver detalle</a>
+      </div>
+    </div>
+
+
+  </div>
 </div>
