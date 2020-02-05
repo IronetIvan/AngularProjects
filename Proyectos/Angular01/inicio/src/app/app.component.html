@@ -13,38 +13,18 @@
   </div>
 
   <div class="row">
-    <div class="card" style="width: 18rem;">
-      <img [src]="rutajava" class="img-fluid" alt="Responsive image" />
+    <div class="card" style="width: 18rem;" *ngFor="let item of elementos">
+      <img [src]="item.getImagen()" class="img-fluid" alt="Responsive image" />
       <div class="card-body">
-        <h5 class="card-title">Java</h5>
+        <h5 class="card-title">{{item.getTitulo()}}</h5>
         <p class="card-text">
-          Lenguaje de programacion Multiplataforma
+          {{item.getDescripcion()}}
         </p>
         <a href="#" class="btn btn-primary">Ver detalle</a>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem;">
-      <img [src]="rutapower" class="img-fluid" alt="Responsive image" />
-      <div class="card-body">
-        <h5 class="card-title">Power Shell</h5>
-        <p class="card-text">
-          Lenguaje destinado a la automaztización y administracion de SO
-        </p>
-        <a href="#" class="btn btn-primary">Ver detalle</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img [src]="rutaangular" class="img-fluid" alt="Responsive image" />
-      <div class="card-body">
-        <h5 class="card-title">Angular</h5>
-        <p class="card-text">
-          Lenguaje destinado a la porgramacion web con Bootstrap
-        </p>
-        <a href="#" class="btn btn-primary">Ver detalle</a>
-      </div>
-    </div>
+   
 
 
   </div>
