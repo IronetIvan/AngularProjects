@@ -10,6 +10,7 @@ import { Tecnologia } from './utils/Tecnologia';
 export class AppComponent implements Object{
   title = 'Hola mundo';
   nombre:string = "Ivan Redondo";
+  mostrarTecnologias:Boolean = true;
   rutajava:string = "../assets/images/java.png";
   objetoJava:Tecnologia = new Tecnologia("Java", "Plataforma desarrolada por Orcale", this.rutajava);
   objetoPS:Tecnologia = new Tecnologia("PowerShell", "Automatizacion de SO", "../assets/images/powershell.png");
@@ -22,6 +23,14 @@ objetoJScript:Tecnologia = new Tecnologia("JavaScript", "Backend y Frontend", ".
 objetoXml:Tecnologia = new Tecnologia("XML", "Estructura de datos", "../assets/images/xml.jpg");
 elementos:Tecnologia[] = [this.objetoJava, this.objetoAngular, this.objetoHtml, this.objetoMysql, this.objetoPS, this.objetoPhp, this.objetoPy, this.objetoXml ]
 
+mandarMensaje(elementos:Tecnologia){
+  console.log(elementos.getDescripcion());
+}
+
+cambiarTecnologia(){
+  console.log(this.mostrarTecnologias);
+  this.mostrarTecnologias = !this.mostrarTecnologias;
+}
 
 /*ngOnInit():void{
   console.log(this.objetoJava.getTitulo());

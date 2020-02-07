@@ -12,7 +12,11 @@
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
   </div>
 
-  <div class="row">
+  <button type="button" class="btn btn-success btn-block">Ver tecnologias</button>
+
+  
+
+  <div class="row" *ngIf="mostrarTecnologias "(click)= "cambiarTecnologia">
     <div class="card" style="width: 18rem;" *ngFor="let item of elementos">
       <img [src]="item.getImagen()" class="img-fluid" alt="Responsive image" />
       <div class="card-body">
@@ -20,7 +24,7 @@
         <p class="card-text">
           {{item.getDescripcion()}}
         </p>
-        <a href="#" class="btn btn-primary">Ver detalle</a>
+        <button href="#" class="btn btn-primary btn-block" (click)="mandarMensaje(item)" >Ver detalle</button>
       </div>
     </div>
 
