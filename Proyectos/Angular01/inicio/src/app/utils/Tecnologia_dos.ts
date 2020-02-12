@@ -1,5 +1,5 @@
 export interface TecnologiaInt {
-    titulo:string;
-    imagen : string;
-    descripcion:string;
+    titulo: string;
+    imagen: string;
+    descripcion: string;
 }

@@ -1,38 +1,40 @@
-import { Component } from '@angular/core';
-import { Tecnologia } from './utils/Tecnologia';
+import { Component, OnInit } from '@angular/core';
+import { Tecnologia } from './utils/tecnologia';
+import { TecnologiaInt } from './utils/tecnologia_dos';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+export class AppComponent {
 
-export class AppComponent implements Object{
-  title = 'Hola mundo';
-  nombre:string = "Ivan Redondo";
-  mostrarTecnologias:Boolean = true;
-  rutajava:string = "../assets/images/java.png";
-  objetoJava:Tecnologia = new Tecnologia("Java", "Plataforma desarrolada por Orcale", this.rutajava);
-  objetoPS:Tecnologia = new Tecnologia("PowerShell", "Automatizacion de SO", "../assets/images/powershell.png");
-  objetoHtml:Tecnologia = new Tecnologia("HTML", "Aplicaciones web", "../assets/images/html.jpeg");
-  objetoMysql:Tecnologia = new Tecnologia("MySql", "Administracion de base de datos", "../assets/images/mysql.jpg");
-objetoPhp:Tecnologia = new Tecnologia("PHP", "Desarrollado para webs dinamicas", "../assets/images/php.png");
-objetoPy:Tecnologia = new Tecnologia("Python", "Desarrollado para backend", "../assets/images/python.jpg");
-objetoAngular:Tecnologia = new Tecnologia("Angular", "Multiplataforma desarrollada por Google", "../assets/images/angular-icon.svg");
-objetoJScript:Tecnologia = new Tecnologia("JavaScript", "Backend y Frontend", "../assets/images/js.jpg");
-objetoXml:Tecnologia = new Tecnologia("XML", "Estructura de datos", "../assets/images/xml.jpg");
-elementos:Tecnologia[] = [this.objetoJava, this.objetoAngular, this.objetoHtml, this.objetoMysql, this.objetoPS, this.objetoPhp, this.objetoPy, this.objetoXml ]
+  title = 'introduccion';
+  nombre: string = 'Adrian Olmo';
+  mostrartecnologias:boolean = false;
+  /*-------------------------------------------*/
+  rutaImagen: string = '../assets/images/java.png';
+  objetoJava: Tecnologia = new Tecnologia('Java', 'Multiplataforma desarrollado por Oracle', '../assets/images/java.png');
+  objetoPs: Tecnologia = new Tecnologia('Powershell', 'Desarrollado para la administración de SO', '../assets/images/powershell.png');
+  objetoHtml: Tecnologia = new Tecnologia('HTML', 'DEsarrollado para el desarrollo de paginas webs', '../assets/images/html.jpeg');
+  objetoMysql: Tecnologia = new Tecnologia('Mysql', 'Desarrollado para base de datos', '../assets/images/mysql.jpg');
+  objetoPhp: Tecnologia = new Tecnologia('PHP', 'Desarrollado para webs dinámicas', '../assets/images/php.png');
+  objetoPy: Tecnologia = new Tecnologia('Python', 'Desarrollado para backend y ia', '../assets/images/python.jpg');
+  objetoAn: Tecnologia = new Tecnologia('Angular', 'Multiplataforma desarrollado por google', '../assets/images/angular-icon.svg');
+  objetoJs: Tecnologia = new Tecnologia('JavaScript', 'BackEnd y FrontEnd', '../assets/images/js.jpg');
+  elementos: Tecnologia[] = [this.objetoJava, this.objetoPs, this.objetoHtml, this.objetoMysql, this.objetoPhp, this.objetoPy, 
+    this.objetoAn, this.objetoJs];
 
-mandarMensaje(elementos:Tecnologia){
-  console.log(elementos.getDescripcion());
-}
 
-cambiarTecnologia(){
-  console.log(this.mostrarTecnologias);
-  this.mostrarTecnologias = !this.mostrarTecnologias;
-}
+    mandarmensaje(elemento:Tecnologia){
+      console.log(elemento.getDescripcion());
+      
+    }
 
-/*ngOnInit():void{
-  console.log(this.objetoJava.getTitulo());
-}*/
+    cambiarTecnologia(){
+      console.log(this.mostrartecnologias);
+      this.mostrartecnologias = !this.mostrartecnologias;
+      
+    }
+
 }

@@ -1,35 +1,36 @@
-<div>
-  <h1>APP Web realizada por {{ nombre }}</h1>
-
-  <div class="jumbotron">
-    <h1 class="display-4">Ejemplo Angular</h1>
-    <p class="lead">
-      This is a simple hero unit, a simple jumbotron-style component for calling
-      extra attention to featured content or information.
-    </p>
-    <hr class="my-4" />
-    <p>Esto es un ejemplo de aplicacion con Angular 8 +Jumbo</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </div>
-
-  <button type="button" class="btn btn-success btn-block">Ver tecnologias</button>
-
-  
-
-  <div class="row" *ngIf="mostrarTecnologias "(click)= "cambiarTecnologia">
-    <div class="card" style="width: 18rem;" *ngFor="let item of elementos">
-      <img [src]="item.getImagen()" class="img-fluid" alt="Responsive image" />
-      <div class="card-body">
-        <h5 class="card-title">{{item.getTitulo()}}</h5>
-        <p class="card-text">
-          {{item.getDescripcion()}}
-        </p>
-        <button href="#" class="btn btn-primary btn-block" (click)="mandarMensaje(item)" >Ver detalle</button>
-      </div>
+<div class="container">
+    <h1>APP WEB realizada por {{nombre}}</h1>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Contenido de la aplicación de DI </h1>
+            <p class="lead">Esto es un ejemplo de aplicacación realizada con angular 8 para la asignarura de DI</p>
+        </div>
     </div>
 
-   
+    <button type="button" class="btn btn-success btn-block" (click) = "cambiarTecnologia()">Ver tencnologías</button>
 
+    
 
-  </div>
-</div>
+    <div class="row" *ngIf="mostrartecnologias">
+        <div class="card" style="width: 18rem;" *ngFor="let item of elementos">
+            <img [src]="item.getImagen()" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.getTitulo()}}</h5>
+                <p class="card-text">{{item.getDescripcion()}}</p>
+                <button href="#" class="btn btn-primary btn-block" (click) = "mandarmensaje(item)">ver detalle</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+            DAM 1
+        </label>
+        <input class="form-check-input" style="margin-left:50px" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" style="margin-left:70px" for="exampleRadios2">
+          DAM 2
+        </label>
+      </div>
+      
