@@ -79,5 +79,6 @@ export class CiclosService {
   }
 
   getAllTecnologias(): Tecnologia[]{
+    return this.tecnologias;
   }
 }
