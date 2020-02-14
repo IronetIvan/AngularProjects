@@ -20,49 +20,49 @@ export class CiclosService {
 
     {
       nombre:"Lenguaje de marcas",
-      ciclo:"DAM1",
+      ciclo:"dam1",
       siglas:"LM",
       tecnologias: [this.objetoHtml, this.objetoJs],
       conocimientos: ["Utilidad", "web", "css"]
     },
     {
       nombre:"Programacion",
-      ciclo:"DAM1",
+      ciclo:"dam1",
       siglas:"POO",
       tecnologias: [this.objetoJava, this.objetoPhp],
       conocimientos: ["Utilidad", "programacion", "c++"]
     },
     {
       nombre:"Base de datos",
-      ciclo:"DAM1",
+      ciclo:"dam1",
       siglas:"BBDD",
       tecnologias: [this.objetoJava, this.objetoMysql],
       conocimientos: ["Utilidad", "base de datos", "MySql"]
     },
     {
       nombre:"Desarrollo de interfaces",
-      ciclo:"DAM2",
+      ciclo:"dam2",
       siglas:"DI",
       tecnologias: [this.objetoJava, this.objetoAn],
       conocimientos: ["Utilidad", "interfaces", "multiplataforma"]
     },
     {
       nombre:"Programacion Multimedia",
-      ciclo:"DAM2",
+      ciclo:"dam2",
       siglas:"PMDM",
       tecnologias: [this.objetoJava, this.objetoHtml],
       conocimientos: ["Utilidad", "android", "css"]
     },
     {
       nombre:"Acceso a datos",
-      ciclo:"DAM2",
+      ciclo:"dam2",
       siglas:"AD",
       tecnologias: [this.objetoJava, this.objetoMysql],
       conocimientos: ["Utilidad", "BBDD", "MySql"]
     },
     {
       nombre:"Procesos y servicios",
-      ciclo:"DAM2",
+      ciclo:"dam2",
       siglas:"PSP",
       tecnologias: [this.objetoJava, this.objetoPhp],
       conocimientos: ["Utilidad", "procesos", "seguridad"]
@@ -81,4 +81,17 @@ export class CiclosService {
   getAllTecnologias(): Tecnologia[]{
     return this.tecnologias;
   }
+  getAsignaturaDAM(ciclo:String):Asignatura[]{
+    let asignaturaCiclo:Asignatura[] = [];
+    this.asignaturasDAM.forEach(element => {
+      if(element.ciclo === ciclo){
+        this.asignaturasDAM.push(element);
+      }
+    });
+    return asignaturaCiclo;
+
+  }
+  
 }
+
+

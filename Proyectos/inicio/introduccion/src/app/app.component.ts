@@ -3,6 +3,7 @@ import { Tecnologia } from './utils/tecnologia';
 import { TecnologiaInt } from './utils/tecnologia_dos';
 import { Asignatura } from './utils/asignatura';
 import { CiclosService } from './services/datos/ciclos.service';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ export class AppComponent implements OnInit{
   }
 
   title = 'introduccion';
-  nombre: string = 'Borja Martin';
+  nombre: string = 'Ivan Redondo';
   mostrarTecnologias: boolean = true;
   mostrarCurso: string;
 
@@ -40,6 +41,8 @@ export class AppComponent implements OnInit{
 
     cambiarCurso(elemento: string) {
       this.mostrarCurso = elemento;
+      console.log(elemento);
+      this.asignaturas = this.servicio.getAsignaturaDAM(elemento);
     }
 
 }
