@@ -86,7 +86,7 @@
     </div>
 
   <div class="row" *ngIf="mostrarTecnologias">
-    <div class="card" style="width: 18rem;" *ngFor="let item of elementos">
+    <div class="card" style="width: 18rem;" *ngFor="let item of elemento">
       <img [src]="item.getImagen()" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">{{ item.getTitulo() }}</h5>

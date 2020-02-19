@@ -16,8 +16,8 @@ export class AsignaturasComponent implements OnInit {
 
   ngOnInit() {
 
-    this.parametro = this.rutas.snapshot.params['parametro'];
-    console.log(`Elemento pasado por parametro ${this.parametro}`);
+  this.Servicio.getAllAsignaturas;
+  this.Servicio.getAllTecnologias;
     
   }
   

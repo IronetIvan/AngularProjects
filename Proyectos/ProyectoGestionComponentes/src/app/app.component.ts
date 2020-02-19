@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
 
   }
 
-     /* mandarMensaje(elemento: Tecnologia){
+     /*mandarMensaje(elemento: Tecnologia){
       console.log(elemento.getDescripcion());
     }*/
 
