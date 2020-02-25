@@ -6,7 +6,7 @@ import { AsignaturasComponent } from './components/asignaturas/asignaturas.compo
 const routes: Routes = [
 
 {path: 'asignaturas/:parametro', component: AsignaturasComponent},
-{path: 'tecnologias', component: AsignaturasComponent},
+{path: 'tecnologias/:tecno', component: AsignaturasComponent},
 {path: 'asignaturasDAM', component:AsignaturasComponent}
 ];
 
