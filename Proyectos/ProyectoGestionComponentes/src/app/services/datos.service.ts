@@ -13,7 +13,7 @@ export class DatosService {
   objetoHtml: Tecnologia = {titulo:'HTML',imagen:'../assets/images/html.jpeg', descripcion:'Lenguaje de marcas'};
   objetoJs: Tecnologia = {titulo:'JavaScript',imagen:'../assets/images/js.jpg', descripcion:'Lenguaje de progrmacion con scripts'};
   objetoPython: Tecnologia = {titulo:'Python',imagen:'../assets/images/python.jpg', descripcion:'Lenguaje de programacion Python'};
-tecnologias: Tecnologia[] = [this.objetoJava, this.objetoAngular, this.objetoHtml, this.objetoJs, this.objetoPython];
+tecnologiasSRV: Tecnologia[] = [this.objetoJava, this.objetoAngular, this.objetoHtml, this.objetoJs, this.objetoPython];
 asignaturasDAM: Asignatura[]=[
 {
   nombre:"Lenguaje de marcas",
@@ -76,7 +76,7 @@ asignaturasDAM: Asignatura[]=[
     return this.asignaturasDAM;
   }
   getAllTecnologias(): Tecnologia[]{
-    return this.tecnologias;
+    return this.tecnologiasSRV;
   }
 
   getAsignaturasDAM(ciclos:string): Asignatura[]{

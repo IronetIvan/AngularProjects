@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DatosService } from '../../services/datos.service';
+import { Tecnologia } from '../../utils/tecnologia';
+import { Asignatura } from '../../utils/asignatura';
 
 @Component({
   selector: 'app-asignaturas',
@@ -11,13 +13,14 @@ export class AsignaturasComponent implements OnInit {
 
 
   parametro: string;
+asignaturas: Asignatura[]
 
   constructor(private rutas: ActivatedRoute, private Servicio:DatosService) { }
 
   ngOnInit() {
 
-  this.Servicio.getAllAsignaturas;
-  this.Servicio.getAllTecnologias;
+  this.asignaturas=this.Servicio.getAllAsignaturas();
+  
     
   }
   
