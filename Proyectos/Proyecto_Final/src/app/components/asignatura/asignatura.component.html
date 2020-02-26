@@ -1,0 +1,21 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Asignaturas</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card" style="width: 18rem;" *ngFor="let item of asignaturas">
+        <h1 class="centro"> {{item.siglas}}</h1>
+        <div class="card-body">
+            <h3 class="centrartitulo">{{item.nombre}}</h3>
+                <ul style="background-color: darkgray;">
+                    <li *ngFor="let conocimiento of item.conocimientos">{{conocimiento}}</li>
+                </ul>
+                <img [src]="tecnologias   .imagen" *ngFor="let tecnologias of item.tecnologias" style="width: 100px; height: 100px;" >
+        
+                <button #elemento class="btn btn-primary btn-block" (click)="mandarMensaje(item)" style="background: black;">Ver detalle</button>
+        </div>
+    </div>
+</div>
+    
