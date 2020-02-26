@@ -1,8 +1,9 @@
 <div class="container-fluid">
   <app-barra-superior></app-barra-superior>
+  
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Listado de Tecnologias</h1>
+      <h1 class="display-4">Inicio</h1>
     </div>
   </div>
 
@@ -11,8 +12,8 @@
       <div class="card" style="width: 18rem;" *ngFor="let item of tecnologias">
           <img [src]="item.imagen" class="card-img-top" alt="...">
           <div class="card-body">
-              <h5 class="card-title">TTitulo Tecnologia</h5>
-              <p class="card-text">Descripcion Tecnologia</p>
+              <h5 class="centro">{{item.titulo}}</h5>
+              <p class="card-text">{{item.descripcion}}</p>
               <button #elemento class="btn btn-primary btn-block" (click)="mandarMensaje(item)">ver detalle</button>
           </div>
       </div>
@@ -21,7 +22,19 @@
 
   <div class="row" *ngIf="mostrarAsignaturas">
 
-    
+    <div class="card" style="width: 18rem;" *ngFor="let item of asignaturas">
+      <img [src]="item.imagen" class="card-img-top" alt="...">
+      <h4 class="centro">{{item.siglas}}</h4>
+      <div class="card-body">
+          <p class="card-text">{{item.nombre}}</p>
+          <p class="card-text">{{item.conocimientos}}</p>
+          <ul class="card-text" style="background-color: cornflowerblue;">
+          <li *ngFor="let conocimientos of item.conocimientos">{{conocimientos}}</li>
+          </ul>
+          <img [src]="tecnologias.imagen" *ngFor="let tecnologias of item.tecnologias" style="width: 100px; height: 100px;">
+          <button #elemento class="btn btn-primary btn-block" (click)="mandarMensaje(item)">ver detalle</button>
+      </div>
+  </div>
 
 </div>
 

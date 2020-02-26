@@ -13,7 +13,7 @@ export class DatosService {
   objAngular:Tecnologia = {titulo:"Angular", descripcion:"Angular", imagen:"../assets/images/anguar.jpeg"}
   objJS:Tecnologia = {titulo:"JS", descripcion:"JavaScript", imagen:"../assets/images/js.jpg"}
   objHTML:Tecnologia = {titulo:"HTML", descripcion:"HTML, CSS", imagen:"../assets/images/html.jpeg"}
-  objXML:Tecnologia = {titulo:"XML", descripcion:"XML", imagen:"../assets/images/xml.png"}
+  objXML:Tecnologia = {titulo:"XML", descripcion:"XML", imagen:"../assets/images/xml.jpg"}
   objSQL:Tecnologia = {titulo:"SQL", descripcion:"SQL", imagen:"../assets/images/mysql.jpg"}
   objPython:Tecnologia = {titulo:"Python", descripcion:"Python", imagen:"../assets/images/python.jpg"}
   tecnologias:Tecnologia[] = [this.objJava, this.objPowerShell, this.objAngular,this.objJS, this.objHTML, this.objXML, this.objSQL, this.objPython]
