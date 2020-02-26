@@ -23,8 +23,8 @@ export class DatosService {
     {nombre: "Sistemas",ciclo: "DAM1",siglas: "SI",tecnologias: [this.objJS],conocimientos: ['Sistemas Operativos', 'Windows', 'Linux']}, 
     {nombre: "Lenguaje de marcas",ciclo: "DAM1",siglas: "LM",tecnologias: [this.objJS, this.objHTML],conocimientos: ['XML', 'Webs', 'Wordpress']},
     {nombre: "Desarrollo de interfaces",ciclo: "DAM2",siglas: "DI",tecnologias: [this.objJava, this.objAngular],conocimientos: ["Utilizadad ", "Interfaces", " Multiplataforma"]}, 
-    {nombre: "Programación multimedia",ciclo: "DAM2",siglas: "PMDM",tecnologias: [this.objJava, this.objAngular],conocimientos: ['Android', ' Moviles', ' XML']}, 
-    {nombre: "Programación de procesos",ciclo: "DAM2",siglas: "PSP",tecnologias: [this.objJava, this.objAngular],conocimientos: ['Hilos', ' Procesos', ' Comunicaciones']}
+    {nombre: "Programación multimedia",ciclo: "DAM2",siglas: "PMDM",tecnologias: [this.objJava, this.objPython],conocimientos: ['Android', ' Moviles', ' XML']}, 
+    {nombre: "Programación de procesos",ciclo: "DAM2",siglas: "PSP",tecnologias: [this.objJava, this.objJS],conocimientos: ['Hilos', ' Procesos', ' Comunicaciones']}
   ];
 
   constructor() { }
