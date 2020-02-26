@@ -29,6 +29,9 @@ export class DatosService {
 
   constructor() { }
 
+  cartasTecnologia: Tecnologia[];
+  cartasDAM1: Asignatura[];
+
   getAllAsignaturas(): Asignatura[] {
     return this.asignaturasDAM;
   }
