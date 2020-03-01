@@ -1,5 +1,5 @@
-<div class="container">
-    <h1 class="display-4" style="color:darkblue">Marcas</h1>
+<div class="container" style="background-color: black;">
+    <h1 class="display-4" style="color:white">Marcas</h1>
 </div>
 
 
@@ -9,9 +9,9 @@
     <div class="card" style="width: 18rem;" *ngFor="let item of marcas">
         <img [src]="item.imagen" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{item.titulo}}</h5>
+            <h5 class="card-title" style="color: midnightblue;">{{item.titulo}}</h5>
             <p class="card-text">{{item.descripcion}}</p>
-            <button #elemento class="btn btn-primary btn-block"  style="background: black;">Ver detalle</button>
+            <button #elemento class="btn btn-primary btn-block"  style="background: black; color: red;">Ver detalle</button>
         </div>
     </div>
 
@@ -19,23 +19,24 @@
 
 <br><br><br><br>
 
-<div class="container">
-    <h1 class="display-4" style="color:deepskyblue">Coches</h1>
+<div class="container" style="background-color: black;">
+    <h1 class="display-4" style="color:white">Coches</h1>
 </div>
 
 <br><br>
 
 <div class="row" *ngIf="mostrarCoches">
   <div class="card" style="width: 18rem;" *ngFor="let item of coches">
-      <h1 class="centro"> {{item.siglas}}</h1>
+    <h1 class="centrartitulo" style="color: deepskyblue;">{{item.nombre}}</h1>
       <div class="card-body">
-          <h3 class="centrartitulo">{{item.nombre}}</h3>
+        <h3 class="centro"> {{item.siglas}}</h3>
+          
           <img [src]="item.imagen" class="card-img-top" alt="...">
               <ul style="background-color: darkgray;">
                   <li *ngFor="let caracteristicas of item.caracteristicas">{{caracteristicas}}</li>
               </ul>
               <img [src]="marcas   .imagen" *ngFor="let marcas of item.marcas" style="width: 100px; height: 100px;" >
       
-              <button #elemento class="btn btn-primary btn-block"  style="background: black;">Ver detalle</button>
+              <button #elemento class="btn btn-primary btn-block"  style="background: black; color: red;">Ver detalle</button>
       </div>
   </div>

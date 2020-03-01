@@ -1,6 +1,6 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4" style="color: darkblue;">Marcas</h1>
+      <h1 class="display-4" style="color: darkblue; text-align: center;">Marcas</h1>
     </div>
 </div>
 
@@ -8,9 +8,9 @@
     <div class="card" style="width: 18rem;" *ngFor="let item of marcas">
         <img [src]="item.imagen" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{item.titulo}}</h5>
+            <h5 class="card-title" style="color: darkblue;">{{item.titulo}}</h5>
             <p class="card-text">{{item.descripcion}}</p>
-            <button #elemento class="btn btn-primary btn-block"  style="background: black;">Ver detalle</button>
+            <button #elemento class="btn btn-primary btn-block"  style="background: black; color: red;">Ver detalle</button>
         </div>
     </div>
 
