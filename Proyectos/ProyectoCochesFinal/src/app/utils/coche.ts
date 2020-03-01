@@ -5,4 +5,5 @@ export interface Coche {
     siglas: string;
     marca: Marca[];
     caracteristicas: string[];
+    imagen:string;
 }

@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="display-4">Marcas</h1>
+    <h1 class="display-4" style="color:darkblue">Marcas</h1>
 </div>
 
 
@@ -20,7 +20,7 @@
 <br><br><br><br>
 
 <div class="container">
-    <h1 class="display-4">Coches</h1>
+    <h1 class="display-4" style="color:deepskyblue">Coches</h1>
 </div>
 
 <br><br>
@@ -30,6 +30,7 @@
       <h1 class="centro"> {{item.siglas}}</h1>
       <div class="card-body">
           <h3 class="centrartitulo">{{item.nombre}}</h3>
+          <img [src]="item.imagen" class="card-img-top" alt="...">
               <ul style="background-color: darkgray;">
                   <li *ngFor="let caracteristicas of item.caracteristicas">{{caracteristicas}}</li>
               </ul>
