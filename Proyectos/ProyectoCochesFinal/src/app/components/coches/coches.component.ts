@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from 'src/app/services/datos.service';
+import { Marca} from 'src/app/utils/marca';
+import { Coche } from 'src/app/utils/coche';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-coches',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CochesComponent implements OnInit {
 
-  constructor() { }
+  coches:Coche[];
+  parametro:string[];
 
-  ngOnInit(): void {
+  constructor(private servicio:DatosService, private rutas:ActivatedRoute) { }
+
+  ngOnInit() {
+    this.coches= this.servicio.getAllCoches()
+    this.rutas.params.subscribe(param =>{
+      console.log(param);
+      
+    });
+    //this.coches = this.servicio.getArrayCoches()
   }
 
 }

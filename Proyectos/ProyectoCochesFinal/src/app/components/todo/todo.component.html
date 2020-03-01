@@ -1,1 +1,40 @@
-<p>todo works!</p>
+<div class="container">
+    <h1 class="display-4">Marcas</h1>
+</div>
+
+
+<br><br>
+
+<div class="row" *ngIf="mostrarMarcas">
+    <div class="card" style="width: 18rem;" *ngFor="let item of marcas">
+        <img [src]="item.imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{item.titulo}}</h5>
+            <p class="card-text">{{item.descripcion}}</p>
+            <button #elemento class="btn btn-primary btn-block" (click)="mandarMensaje(item)" style="background: black;">Ver detalle</button>
+        </div>
+    </div>
+
+</div>
+
+<br><br><br><br>
+
+<div class="container">
+    <h1 class="display-4">Coches</h1>
+</div>
+
+<br><br>
+
+<div class="row" *ngIf="mostrarCoches">
+  <div class="card" style="width: 18rem;" *ngFor="let item of coches">
+      <h1 class="centro"> {{item.siglas}}</h1>
+      <div class="card-body">
+          <h3 class="centrartitulo">{{item.nombre}}</h3>
+              <ul style="background-color: darkgray;">
+                  <li *ngFor="let caracteristicas of item.caracteristicas">{{caracteristicas}}</li>
+              </ul>
+              <img [src]="marcas   .imagen" *ngFor="let marcas of item.marcas" style="width: 100px; height: 100px;" >
+      
+              <button #elemento class="btn btn-primary btn-block" (click)="mandarMensaje(item)" style="background: black;">Ver detalle</button>
+      </div>
+  </div>

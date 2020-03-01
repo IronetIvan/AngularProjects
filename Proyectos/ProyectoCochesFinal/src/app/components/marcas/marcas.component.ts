@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Marca } from 'src/app/utils/marca';
+import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
   selector: 'app-marcas',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./marcas.component.css']
 })
 export class MarcasComponent implements OnInit {
+  marcas:Marca[];
 
-  constructor() { }
+  constructor(private servicios:DatosService) { }
 
   ngOnInit(): void {
+    this.marcas= this.servicios.getAllMarcas();
   }
 
 }

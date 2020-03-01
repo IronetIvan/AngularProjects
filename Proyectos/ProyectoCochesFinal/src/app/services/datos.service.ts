@@ -9,11 +9,11 @@ import { core } from '@angular/compiler';
 export class DatosService {
 
   cocheBMW:Marca = {titulo:"BMW", descripcion:"Marca alemana vehículos de alta gama",imagen:"../assets/images/bmwlogo.png"}
-  cocheFerrari:Marca = {titulo:"Ferrari", descripcion:"Marca italiana vehículos deportivos de alto rendimiento",imagen:"../assets/images/bmwlogo.png"}
-  cocheRomeo:Marca = {titulo:"Alfa Romeo", descripcion:"Marca italiana vehículos de alta gama",imagen:"../assets/images/bmwlogo.png"}
-  cocheMercedes:Marca = {titulo:"Mercedes", descripcion:"Marca alemana vehículos de alta gama",imagen:"../assets/images/bmwlogo.png"}
-  cocheRenault:Marca = {titulo:"Renault", descripcion:"Marca francesa vehículos de media y alta gama",imagen:"../assets/images/bmwlogo.png"}
-  cochePorsche:Marca = {titulo:"Porsche", descripcion:"Marca alemana vehículos deportivos con grandes prestaciones",imagen:"../assets/images/bmwlogo.png"}
+  cocheFerrari:Marca = {titulo:"Ferrari", descripcion:"Marca italiana vehículos deportivos de alto rendimiento",imagen:"../assets/images/ferrari.png"}
+  cocheRomeo:Marca = {titulo:"Alfa Romeo", descripcion:"Marca italiana vehículos de alta gama",imagen:"../assets/images/alfaromeo.png"}
+  cocheMercedes:Marca = {titulo:"Mercedes", descripcion:"Marca alemana vehículos de alta gama",imagen:"../assets/images/mercedes.png"}
+  cocheRenault:Marca = {titulo:"Renault", descripcion:"Marca francesa vehículos de media y alta gama",imagen:"../assets/images/renault.png"}
+  cochePorsche:Marca = {titulo:"Porsche", descripcion:"Marca alemana vehículos deportivos con grandes prestaciones",imagen:"../assets/images/porsche.png"}
   marcas:Marca[]= [this.cocheBMW,this.cocheFerrari, this.cocheMercedes, this.cochePorsche, this.cocheRenault, this.cocheRomeo]
 
   coches:Coche[]=[
