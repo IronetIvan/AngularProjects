@@ -7,6 +7,7 @@ import { BarraSuperiorComponent } from './components/barra-superior/barra-superi
 import { TodoComponent } from './components/todo/todo.component';
 import { MarcasComponent } from './components/marcas/marcas.component';
 import { CochesComponent } from './components/coches/coches.component';
+import { DetalleCochesComponent } from './components/detalle-coches/detalle-coches.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CochesComponent } from './components/coches/coches.component';
     BarraSuperiorComponent,
     TodoComponent,
     MarcasComponent,
-    CochesComponent
+    CochesComponent,
+    DetalleCochesComponent
   ],
   imports: [
     BrowserModule,

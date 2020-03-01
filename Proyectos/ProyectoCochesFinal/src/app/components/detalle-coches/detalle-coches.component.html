@@ -1,0 +1,15 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4" style="color: deepskyblue;">Detalle Coches</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card" style="width: 18rem;" *ngFor="let item of coches">
+        <h1 class="centro"> {{item.nombre}}</h1>
+        <div class="card-body">
+            <img [src]="item.imagen" class="card-img-top" alt="...">
+                
+        </div>
+    </div>
+</div>

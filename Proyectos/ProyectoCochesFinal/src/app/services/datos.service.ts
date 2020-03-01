@@ -25,6 +25,17 @@ export class DatosService {
     {nombre: "Porsche",modelo: "911 Carrera",siglas: "911",marca: [this.cochePorsche],caracteristicas: ['Alemania', 'Superdeportivo', 'Alta CC'],imagen:"../assets/images/p911.jpg"}
   ];
 
+  cocheDetalle:Coche[]=[
+    {nombre: "BMW",modelo: "M4",siglas: "BMW",marca: [this.cocheBMW],caracteristicas: ["Deportivo", "Coupe", 'Rendimiento'], imagen:"../assets/images/bmw.jpg"}, 
+    {nombre: "Ferrari",modelo: "459 Italia",siglas: "458Ita",marca: [this.cocheFerrari],caracteristicas: ['Superdeportivo', 'Lujo', 'Alta CC'],imagen:"../assets/images/f458.jpg"}, 
+    {nombre: "Alfa Romeo",modelo: "Giulia",siglas: "ARG",marca: [this.cocheRomeo],caracteristicas: ['Italia', 'Deporyivo', 'ALta gama'],imagen:"../assets/images/giulia.jpg"},
+    {nombre: "Mercedes",modelo: "AMG GT",siglas: "AMG",marca: [this.cocheMercedes],caracteristicas: ["Alemania ", "Deportivo", "Alta gama"],imagen:"../assets/images/mamg.jpg"}, 
+    {nombre: "Renault",modelo: "Megane RS", siglas: "RS",marca: [this.cocheRenault],caracteristicas: ['Francia', 'Deportivo', 'Elegancia'],imagen:"../assets/images/megane.jpg"}, 
+    {nombre: "Porsche",modelo: "911 Carrera",siglas: "911",marca: [this.cochePorsche],caracteristicas: ['Alemania', 'Superdeportivo', 'Alta CC'],imagen:"../assets/images/p911.jpg"}
+
+
+  ];
+
   constructor() { }
 
   cartasMarcas:Marca[]
@@ -54,5 +65,9 @@ export class DatosService {
 
   getArrayCoches():Coche[]{
     return this.cartasCoches;
+  }
+  
+  getCocheSelec():Coche[]{
+    return this.cocheDetalle;;
   }
 }
