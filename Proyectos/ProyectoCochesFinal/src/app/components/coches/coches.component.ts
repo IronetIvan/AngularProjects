@@ -28,4 +28,9 @@ export class CochesComponent implements OnInit {
     //this.coches = this.servicio.getArrayCoches()
   }
 
+  clickDetalles(){
+    alert('hola has pulsado un boton, pero no soy capaz de abrir el componente detalle-coche')
+    
+  }
+
 }
