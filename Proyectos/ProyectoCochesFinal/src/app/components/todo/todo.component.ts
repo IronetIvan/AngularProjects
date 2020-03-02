@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/services/datos.service';
 import { Coche } from 'src/app/utils/coche';
 import { Marca } from 'src/app/utils/marca';
+import { DetalleCochesComponent } from '../detalle-coches/detalle-coches.component';
 
 @Component({
   selector: 'app-todo',
@@ -13,6 +14,7 @@ export class TodoComponent implements OnInit {
   mostrarCoches:boolean= true;
   coches:Coche[];
   marcas:Marca[];
+  
 
   constructor(private servicios:DatosService) { }
 
@@ -20,5 +22,4 @@ export class TodoComponent implements OnInit {
     this.coches = this.servicios.getAllCoches();
     this.marcas= this.servicios.getAllMarcas();
   }
-
 }
