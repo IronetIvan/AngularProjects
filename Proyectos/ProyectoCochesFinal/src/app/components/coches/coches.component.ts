@@ -26,7 +26,7 @@ export class CochesComponent implements OnInit {
       
     });
 
-    //this.coches = this.servicio.getArrayCoches()
+    this.cochesDetalle = this.servicio.getArrayDetalles()
   }
 //Mostrar detalles coche
   mostrarDetalle(cochesDetalle:detalle){
