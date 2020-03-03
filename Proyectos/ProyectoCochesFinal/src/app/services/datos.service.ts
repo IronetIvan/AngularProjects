@@ -70,6 +70,9 @@ export class DatosService {
   getArrayCoches():Coche[]{
     return this.cartasCoches;
   }
+  getArrayDetalles():detalle[]{
+    return this.cartasDetalle;
+  }
   
 getModelo(modelo:string):detalle[]{
   let cochesDet:Coche[] = []
