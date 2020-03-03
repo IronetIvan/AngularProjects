@@ -4,7 +4,6 @@ import { DatosService } from 'src/app/services/datos.service';
 import { ActivatedRoute } from '@angular/router';
 import { FnParam } from '@angular/compiler/src/output/output_ast';
 import { __param } from 'tslib';
-import { detalle } from 'src/app/utils/detalle';
 
 @Component({
   selector: 'app-detalle-coches',
@@ -14,7 +13,7 @@ import { detalle } from 'src/app/utils/detalle';
 export class DetalleCochesComponent implements OnInit {
 
  
-  private unCoche:detalle[]
+  private unCoche:Coche[]
   constructor(private servicio:DatosService, private rutaActiva: ActivatedRoute) { }
 
 

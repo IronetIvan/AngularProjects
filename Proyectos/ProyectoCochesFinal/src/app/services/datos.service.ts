@@ -4,7 +4,6 @@ import { Coche } from '../utils/coche';
 import { core } from '@angular/compiler';
 import { element } from 'protractor';
 import { DetalleCochesComponent } from '../components/detalle-coches/detalle-coches.component';
-import { detalle } from '../utils/detalle';
 
 @Injectable({
   providedIn: 'root'
@@ -28,22 +27,11 @@ export class DatosService {
     {nombre: "Porsche",modelo: "911 Carrera",siglas: "911",marca: [this.cochePorsche],caracteristicas: ['Alemania', 'Superdeportivo', 'Alta CC'],imagen:"../assets/images/p911.jpg"}
   ];
 
-  cocheDetalle:detalle[]=[
-    {nombre: "BMW",modelo: "M4", imagen:"../assets/images/bmw.jpg"}, 
-    {nombre: "Ferrari",modelo: "459 Italia",imagen:"../assets/images/f458.jpg"}, 
-    {nombre: "Alfa Romeo",modelo: "Giulia",imagen:"../assets/images/giulia.jpg"},
-    {nombre: "Mercedes",modelo: "AMG GT",imagen:"../assets/images/mamg.jpg"}, 
-    {nombre: "Renault",modelo: "Megane RS",imagen:"../assets/images/megane.jpg"}, 
-    {nombre: "Porsche",modelo: "911 Carrera",imagen:"../assets/images/p911.jpg"}
-
-
-  ];
 
   constructor() { }
 
   cartasMarcas:Marca[]
   cartasCoches:Coche[]
-  cartasDetalle:detalle[]
 
   getAllMarcas():Marca[]{
     return this.marcas;
@@ -70,18 +58,15 @@ export class DatosService {
   getArrayCoches():Coche[]{
     return this.cartasCoches;
   }
-  getArrayDetalles():detalle[]{
-    return this.cartasDetalle;
+
+  getModelo(modelo:string):Coche[]{
+    let cochesDet:Coche[] = []
+    this.coches.forEach(element=>{
+      if(element.modelo == modelo){
+        this.coches.push(element)
+      }
+    })
+    return cochesDet;
   }
-  
-getModelo(modelo:string):detalle[]{
-  let cochesDet:Coche[] = []
-  this.coches.forEach(element=>{
-    if(element.modelo == modelo){
-      this.coches.push(element)
-    }
-  })
-  return cochesDet;
-}
 
 }

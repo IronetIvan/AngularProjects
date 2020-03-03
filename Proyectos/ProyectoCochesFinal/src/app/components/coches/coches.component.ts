@@ -4,7 +4,6 @@ import { Marca} from 'src/app/utils/marca';
 import { Coche } from 'src/app/utils/coche';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DetalleCochesComponent } from '../detalle-coches/detalle-coches.component';
-import { detalle } from 'src/app/utils/detalle';
 
 @Component({
   selector: 'app-coches',
@@ -15,7 +14,7 @@ export class CochesComponent implements OnInit {
 
   coches:Coche[];
   parametro:string[];
-  cochesDetalle:detalle[];
+ 
 
   constructor(private servicio:DatosService, private rutas:ActivatedRoute, private ruta:Router) { }
 
@@ -26,10 +25,10 @@ export class CochesComponent implements OnInit {
       
     });
 
-    this.cochesDetalle = this.servicio.getArrayDetalles()
+    
   }
 //Mostrar detalles coche
-  mostrarDetalle(cochesDetalle:detalle){
+  mostrarDetalle(cochesDetalle:Coche){
     this.ruta.navigate(['detalle', cochesDetalle.modelo])
   }
 
