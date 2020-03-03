@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Marca } from '../utils/marca';
 import { Coche } from '../utils/coche';
 import { core } from '@angular/compiler';
+import { element } from 'protractor';
+import { DetalleCochesComponent } from '../components/detalle-coches/detalle-coches.component';
+import { detalle } from '../utils/detalle';
 
 @Injectable({
   providedIn: 'root'
@@ -25,13 +28,13 @@ export class DatosService {
     {nombre: "Porsche",modelo: "911 Carrera",siglas: "911",marca: [this.cochePorsche],caracteristicas: ['Alemania', 'Superdeportivo', 'Alta CC'],imagen:"../assets/images/p911.jpg"}
   ];
 
-  cocheDetalle:Coche[]=[
-    {nombre: "BMW",modelo: "M4",siglas: "BMW",marca: [this.cocheBMW],caracteristicas: ["Deportivo", "Coupe", 'Rendimiento'], imagen:"../assets/images/bmw.jpg"}, 
-    {nombre: "Ferrari",modelo: "459 Italia",siglas: "458Ita",marca: [this.cocheFerrari],caracteristicas: ['Superdeportivo', 'Lujo', 'Alta CC'],imagen:"../assets/images/f458.jpg"}, 
-    {nombre: "Alfa Romeo",modelo: "Giulia",siglas: "ARG",marca: [this.cocheRomeo],caracteristicas: ['Italia', 'Deporyivo', 'ALta gama'],imagen:"../assets/images/giulia.jpg"},
-    {nombre: "Mercedes",modelo: "AMG GT",siglas: "AMG",marca: [this.cocheMercedes],caracteristicas: ["Alemania ", "Deportivo", "Alta gama"],imagen:"../assets/images/mamg.jpg"}, 
-    {nombre: "Renault",modelo: "Megane RS", siglas: "RS",marca: [this.cocheRenault],caracteristicas: ['Francia', 'Deportivo', 'Elegancia'],imagen:"../assets/images/megane.jpg"}, 
-    {nombre: "Porsche",modelo: "911 Carrera",siglas: "911",marca: [this.cochePorsche],caracteristicas: ['Alemania', 'Superdeportivo', 'Alta CC'],imagen:"../assets/images/p911.jpg"}
+  cocheDetalle:detalle[]=[
+    {nombre: "BMW",modelo: "M4", imagen:"../assets/images/bmw.jpg"}, 
+    {nombre: "Ferrari",modelo: "459 Italia",imagen:"../assets/images/f458.jpg"}, 
+    {nombre: "Alfa Romeo",modelo: "Giulia",imagen:"../assets/images/giulia.jpg"},
+    {nombre: "Mercedes",modelo: "AMG GT",imagen:"../assets/images/mamg.jpg"}, 
+    {nombre: "Renault",modelo: "Megane RS",imagen:"../assets/images/megane.jpg"}, 
+    {nombre: "Porsche",modelo: "911 Carrera",imagen:"../assets/images/p911.jpg"}
 
 
   ];
@@ -40,6 +43,7 @@ export class DatosService {
 
   cartasMarcas:Marca[]
   cartasCoches:Coche[]
+  cartasDetalle:detalle[]
 
   getAllMarcas():Marca[]{
     return this.marcas;
@@ -67,7 +71,14 @@ export class DatosService {
     return this.cartasCoches;
   }
   
-  getCocheSelec():Coche[]{
-    return this.cocheDetalle;;
-  }
+getModelo(modelo:string):detalle[]{
+  let cochesDet:Coche[] = []
+  this.coches.forEach(element=>{
+    if(element.modelo == modelo){
+      this.coches.push(element)
+    }
+  })
+  return cochesDet;
+}
+
 }

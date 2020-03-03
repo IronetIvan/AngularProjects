@@ -16,7 +16,7 @@
                 </ul>
                 <img [src]="marcas   .imagen" *ngFor="let marcas of item.marcas" style="width: 100px; height: 100px;" >
                 
-                <button #elemento class="btn btn-primary btn-block" (click)="clickDetalles()" clstyle="background: black; color: red;">Ver detalle</button>
+                <button class="btn btn-primary btn-block" (click)="mostrarDetalle(item)" clstyle="background: black; color: red;">Ver detalle</button>
         </div>
     </div>
 </div>

@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/services/datos.service';
 import { Marca} from 'src/app/utils/marca';
 import { Coche } from 'src/app/utils/coche';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DetalleCochesComponent } from '../detalle-coches/detalle-coches.component';
+import { detalle } from 'src/app/utils/detalle';
 
 @Component({
   selector: 'app-coches',
@@ -14,9 +15,9 @@ export class CochesComponent implements OnInit {
 
   coches:Coche[];
   parametro:string[];
-  cochesDetalle:Coche[];
+  cochesDetalle:detalle[];
 
-  constructor(private servicio:DatosService, private rutas:ActivatedRoute) { }
+  constructor(private servicio:DatosService, private rutas:ActivatedRoute, private ruta:Router) { }
 
   ngOnInit() {
     this.coches= this.servicio.getAllCoches()
@@ -24,13 +25,12 @@ export class CochesComponent implements OnInit {
       console.log(param);
       
     });
-    this.cochesDetalle= this.servicio.getCocheSelec();
+
     //this.coches = this.servicio.getArrayCoches()
   }
-
-  clickDetalles(){
-    alert('hola has pulsado un boton, pero no soy capaz de abrir el componente detalle-coche')
-    
+//Mostrar detalles coche
+  mostrarDetalle(cochesDetalle:detalle){
+    this.ruta.navigate(['detalle', cochesDetalle.modelo])
   }
 
 }
