@@ -8,7 +8,7 @@
     <div class="card" style="width: 18rem;" *ngFor="let item of coches">
         <h1 class="centro"> {{item.nombre}}</h1>
         <div class="card-body">
-            <img [src]="item.imagen" class="card-img-top" alt="...">
+            <img [src]="coches.imagen" *ngFor="let coches of item.coches"class="card-img-top" alt="...">
                 
         </div>
     </div>
