@@ -41,7 +41,7 @@ export class DatosService {
   }
 
   getCochesDeportivos(modelo:string):Coche[]{
-    let coches:Coche[] = []
+    let cochesDep:Coche[] = []
     this.coches.forEach(element => {
       if (element.modelo == modelo) {
         this.coches.push(element)
@@ -66,7 +66,7 @@ export class DatosService {
         this.coches.push(element)
       }
     })
-    return cochesDet;
+    return this.coches;
   }
 
 }

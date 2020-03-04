@@ -13,13 +13,13 @@ import { __param } from 'tslib';
 export class DetalleCochesComponent implements OnInit {
 
  coches:Coche[]
+
   private unCoche:Coche[]
   constructor(private servicio:DatosService, private rutaActiva: ActivatedRoute) { }
 
-
   ngOnInit() {
     this.rutaActiva.params.subscribe(param=>{
-      this.unCoche= this.servicio.getModelo(param.getModelo)
+      this.unCoche= this.servicio.getModelo(param.modelo)
     })
   }
 
