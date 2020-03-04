@@ -29,7 +29,7 @@ export class CochesComponent implements OnInit {
   }
 //Mostrar detalles coche
   mostrarDetalle(cochesDetalle:Coche){
-    this.ruta.navigate(['detalle', cochesDetalle.modelo])
+    this.ruta.navigate(['cochesDet', cochesDetalle.modelo])
     alert("No soy capaz de terminar los detalles...")
   }
 

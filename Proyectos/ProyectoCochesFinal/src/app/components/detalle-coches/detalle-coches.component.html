@@ -9,7 +9,7 @@
         <h1 class="centro"> {{item.nombre}}</h1>
         <div class="card-body">
             <img [src]="coches.imagen" *ngFor="let coches of item.coches"class="card-img-top" alt="...">
-                
+              <a [routerLink]="['/cochesDet', item.mostrarDetalle()]" routerLinkActive="router-link-active" ]>Ver mas</a>  
         </div>
     </div>
 </div>

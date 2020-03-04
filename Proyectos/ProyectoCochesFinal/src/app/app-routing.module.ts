@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'marcas', component:MarcasComponent},
   {path:'coches', component:CochesComponent},
   {path:'coches/:parametro', component:CochesComponent},  
-  {path:'coches', component:DetalleCochesComponent},
+  {path:'cochesDet', component:DetalleCochesComponent},
   {path:'detalle', component:DetalleCochesComponent}
 
 ];
